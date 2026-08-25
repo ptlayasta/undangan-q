@@ -84,7 +84,7 @@ function MusicToggle({ url, accent, bg, preview }) {
 }
 
 export default function InvitationRenderer({ event, template, guest, preview = false }) {
-  const cfg = event?.config || {};
+  const cfg = useMemo(() => event?.config || {}, [event?.config]);
   const theme = template?.theme || { primary: "#8a6a3a", accent: "#c9a961", bg: "#f4ecdd", font_heading: "Cormorant Garamond" };
   const isDark = theme.bg && theme.bg.startsWith("#1");
   const textColor = isDark ? "#f4ecdd" : "#2a2018";
@@ -101,9 +101,11 @@ export default function InvitationRenderer({ event, template, guest, preview = f
     const ev = cfg.events?.[0];
     const date = ev?.date || cfg.event_date;
     const time = ev?.time_start || cfg.event_time || "10:00";
+
     if (!date) return null;
+
     return `${date}T${(time || "10:00").padEnd(5, "0")}:00`;
-  }, [cfg]);
+  }, [cfg.events, cfg.event_date, cfg.event_time]);
 
   const heroLabel = cfg.hero_label !== undefined && cfg.hero_label !== "" ? cfg.hero_label : ({
     wedding: "The Wedding of", engagement: "Engagement of", aqiqah: "Aqiqah",
