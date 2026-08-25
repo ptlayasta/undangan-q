@@ -22,21 +22,20 @@ export default function Landing() {
       <section className="max-w-7xl mx-auto px-6 pt-16 pb-24 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="overline">Undangan Digital · Nusantara</span>
+            <span className="overline">Undangan Digital</span>
             <h1 className="font-heading font-extrabold tracking-tight text-5xl sm:text-6xl lg:text-7xl mt-4 leading-[0.98]">
-              Kirim undangan yang <span className="italic font-serif text-[#c05c46]">berkesan</span>,<br />
-              lewat WhatsApp.
+              Buat undangan yang <span className="italic font-serif text-[#c05c46]">berkesan</span>
             </h1>
             <p className="mt-6 text-lg text-neutral-600 max-w-xl font-body">
-              Buat undangan pernikahan, aqiqah, dan ulang tahun dengan template elegan.
-              Kelola tamu, kirim link personal via WhatsApp, dan pantau RSVP real-time.
+              Buat undangan digital pernikahan, ulang tahun, kelulusan, dan berbagai acara lainnya secara <strong className="font-mono text-[#c05c46]">GRATIS</strong>.
+              Kelola tamu, kirim link undangan personal via WhatsApp, dan pantau RSVP real-time.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <button data-testid="hero-get-started" onClick={goStart} className="btn-primary">
-                Mulai Gratis <ChevronRight className="w-4 h-4" />
+                Mulai Buat Undangan Gratis <ChevronRight className="w-4 h-4" />
               </button>
               <button data-testid="hero-see-templates" onClick={() => navigate("/templates")} className="btn-ghost">
-                Lihat Template
+                Lihat Template Undangan
               </button>
             </div>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-500 font-body">
@@ -80,24 +79,24 @@ export default function Landing() {
         <div className="mb-10">
           <span className="overline">Fitur Utama</span>
           <h2 className="font-heading font-bold text-4xl sm:text-5xl mt-3 tracking-tight max-w-2xl">
-            Semua yang Anda butuhkan untuk hari besar.
+            Semua fitur yang Anda butuhkan untuk undangan digital.
           </h2>
         </div>
 
         <div className="bento">
           <div className="col-span-12 lg:col-span-7 min-h-[280px]" style={{ background: "linear-gradient(135deg, #4a5d4e 0%, #2e3d31 100%)", color: "white" }}>
-            <span className="overline" style={{ color: "#d4af37" }}>Editor Modern</span>
-            <h3 className="font-heading text-3xl font-bold mt-3">Editor drag-and-form, live preview mobile.</h3>
+            <span className="overline" style={{ color: "#d4af37" }}>Editor Undangan Modern</span>
+            <h3 className="font-heading text-3xl font-bold mt-3">Editor drag-and-drop, live preview mobile.</h3>
             <p className="mt-3 text-white/70 font-body">
               Ubah teks, warna, foto, video, dan musik latar. Preview langsung dalam bingkai HP di sisi kanan.
             </p>
             <Sparkles className="w-32 h-32 text-white/10 absolute -bottom-4 -right-4" />
           </div>
           <div className="col-span-12 lg:col-span-5 min-h-[280px]">
-            <span className="overline">WhatsApp Bulk</span>
-            <h3 className="font-heading text-2xl font-bold mt-3">Link personal untuk setiap tamu.</h3>
+            <span className="overline">Kirim Undangan via WhatsApp</span>
+            <h3 className="font-heading text-2xl font-bold mt-3">Link undangan personal untuk setiap tamu.</h3>
             <p className="mt-3 text-neutral-600 font-body text-sm">
-              <span className="font-mono text-[#c05c46]">yourevent.com/pak-budi</span> — pesan disesuaikan dengan nama tamu.
+              <span className="font-mono text-[#c05c46]">andirina.undanganq.com/pak-budi</span> — pesan undangan disesuaikan dengan nama tamu.
             </p>
             <div className="mt-6 flex items-center gap-2 text-[#25d366]">
               <Send className="w-5 h-5" /> <span className="font-semibold">Kirim ke 500+ tamu sekali klik</span>
@@ -105,20 +104,20 @@ export default function Landing() {
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-4 min-h-[220px]">
             <Users className="w-8 h-8 text-[#c05c46]" />
-            <h3 className="font-heading text-xl font-bold mt-4">RSVP Real-time</h3>
-            <p className="mt-2 text-neutral-600 text-sm font-body">Dashboard dengan grafik hadir, tidak hadir, dan pending.</p>
+            <h3 className="font-heading text-xl font-bold mt-4">RSVP Undangan Real-time</h3>
+            <p className="mt-2 text-neutral-600 text-sm font-body">Dashboard dengan grafik tamu hadir, tidak hadir, dan pending.</p>
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-4 min-h-[220px]">
             <Music4 className="w-8 h-8 text-[#c05c46]" />
-            <h3 className="font-heading text-xl font-bold mt-4">Musik & Video</h3>
-            <p className="mt-2 text-neutral-600 text-sm font-body">Upload lagu latar dan video pre-wedding tanpa batas.</p>
+            <h3 className="font-heading text-xl font-bold mt-4">Musik & Video Undangan</h3>
+            <p className="mt-2 text-neutral-600 text-sm font-body">Upload lagu latar dan video pre-wedding untuk membuat undangan lebih berkesan.</p>
           </div>
           <div className="col-span-12 lg:col-span-4 min-h-[220px]" style={{ background: FLORAL ? `url(${FLORAL}) center/cover` : "", color: "white" }}>
             <div className="absolute inset-0 bg-black/45" />
             <div className="relative">
-              <span className="overline" style={{ color: "#f5c88a" }}>Bahasa Nusantara</span>
-              <h3 className="font-heading text-2xl font-bold mt-3 text-white">Wedding · Aqiqah · Ultah</h3>
-              <p className="mt-2 text-white/80 text-sm font-body">Template kultural untuk momen paling penting.</p>
+              <span className="overline" style={{ color: "#f5c88a" }}>Bahasa Indonesia</span>
+              <h3 className="font-heading text-2xl font-bold mt-3 text-white">Pernikahan · Ulang Tahun · Acara Keluarga</h3>
+              <p className="mt-2 text-white/80 text-sm font-body">Template undangan untuk berbagai momen penting dan acara spesial Anda.</p>
             </div>
           </div>
         </div>
@@ -128,7 +127,7 @@ export default function Landing() {
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-10 flex items-end justify-between flex-wrap gap-4">
           <div>
-            <span className="overline">Harga</span>
+            <span className="overline">Harga Undangan Digital</span>
             <h2 className="font-heading font-bold text-4xl mt-3 tracking-tight">Mulai gratis. Upgrade saat siap.</h2>
           </div>
         </div>
@@ -142,10 +141,10 @@ export default function Landing() {
             <ul className="mt-6 space-y-2 text-sm text-neutral-700 font-body">
               <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#4a5d4e] mt-0.5" /> 3 template dasar</li>
               <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#4a5d4e] mt-0.5" /> Sampai 30 tamu</li>
-              <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#4a5d4e] mt-0.5" /> Halaman undangan publik</li>
+              <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#4a5d4e] mt-0.5" /> Halaman undangan digital publik</li>
               <li className="flex gap-2 opacity-50"><CheckCircle2 className="w-4 h-4 mt-0.5" /> Tanpa pengiriman WhatsApp</li>
             </ul>
-            <button data-testid="pricing-free-cta" onClick={goStart} className="btn-ghost w-full mt-6 justify-center">Mulai Gratis</button>
+            <button data-testid="pricing-free-cta" onClick={goStart} className="btn-ghost w-full mt-6 justify-center">Mulai Buat Undangan Gratis</button>
           </div>
           <div className="p-8 rounded-3xl bg-[#1a1a1a] text-white relative overflow-hidden">
             <span className="absolute top-6 right-6 text-xs px-2 py-1 rounded-full bg-[#d4af37] text-black font-bold">POPULER</span>
@@ -155,9 +154,9 @@ export default function Landing() {
               <span className="text-white/50">/undangan</span>
             </div>
             <ul className="mt-6 space-y-2 text-sm text-white/85 font-body">
-              <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5" /> Semua template premium</li>
+              <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5" /> Semua template undangan premium</li>
               <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5" /> Tamu tanpa batas</li>
-              <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5" /> Pengiriman WhatsApp bulk</li>
+              <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5" /> Pengiriman undangan WhatsApp bulk</li>
               <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#d4af37] mt-0.5" /> Upload musik & video</li>
             </ul>
             <button data-testid="pricing-premium-cta" onClick={goStart} className="btn-primary w-full mt-6 justify-center">Bayar dengan QRIS</button>
@@ -168,7 +167,7 @@ export default function Landing() {
       <footer className="border-t border-[#e2dfd9] py-10 mt-10">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm text-neutral-500 font-body">
           <span>© 2026 Undangan Digital</span>
-          <span className="overline">Made with love in Indonesia</span>
+          <span className="overline">Dibuat dengan cinta di Indonesia</span>
         </div>
       </footer>
     </div>
