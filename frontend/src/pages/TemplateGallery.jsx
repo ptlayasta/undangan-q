@@ -47,6 +47,14 @@ export default function TemplateGallery() {
           </div>
         </div>
 
+        <Tabs value={selectedType} onValueChange={setSelectedType}>
+          <TabsList className="flex-wrap h-auto p-1" data-testid="type-filter">
+            {types.map((t) => (
+              <TabsTrigger key={t.key} value={t.key} data-testid={`tab-${t.key}`}>{t.label}</TabsTrigger>
+            ))}
+          </TabsList>
+        </Tabs>
+
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="template-grid">
           {filtered.map((t) => (
             <div key={t.template_id} className="rounded-2xl overflow-hidden bg-white border border-[#e2dfd9] group" data-testid={`tpl-card-${t.template_id}`}>
