@@ -8,7 +8,6 @@ from datetime import datetime, timezone, timedelta
 from typing import List, Optional
 
 import requests
-import certifi
 from fastapi import FastAPI, APIRouter, HTTPException, Header, Cookie, Response, UploadFile, File, Query, Request
 from fastapi.responses import Response as FastAPIResponse
 from dotenv import load_dotenv
@@ -20,7 +19,7 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / ".env")
 
 mongo_url = os.environ["MONGO_URL"]
-client = AsyncIOMotorClient(mongo_url, tls=True, tlsCAFile=certifi.where())
+client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ["DB_NAME"]]
 
 APP_NAME = "undangan-digital"
@@ -365,6 +364,7 @@ TEMPLATES = [
 
 
 EVENT_TYPES = [
+    {"key": "all", "label": "Semua"},
     {"key": "wedding", "label": "Pernikahan"},
     {"key": "engagement", "label": "Tunangan"},
     {"key": "aqiqah", "label": "Aqiqah"},

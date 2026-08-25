@@ -30,7 +30,7 @@ export default function NewEvent() {
     })();
   }, []);
 
-  const filtered = templates.filter((t) => t.category === selectedType);
+  const filtered = selectedType === "all" ? templates : templates.filter((t) => t.category === selectedType);
 
   const submit = async () => {
     if (!title.trim()) return toast.error("Judul undangan wajib diisi");
